@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="12px" height="12px" viewBox="0 0 12 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>C77242AA-0524-42B6-A055-2B2C49C34C4F</title>
+    <desc>Created with sketchtool.</desc>
+    <g id="PC" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="UI-kit" transform="translate(-827.000000, -1535.000000)" fill="#FFFFFF" fill-rule="nonzero">
+            <g id="add-file" transform="translate(611.000000, 1408.000000)">
+                <g id="filelist" transform="translate(216.000000, 57.000000)">
+                    <g id="file" transform="translate(0.000000, 64.000000)">
+                        <g id="Icons/close/white" transform="translate(0.000000, 6.000000)">
+                            <path d="M6,5.29289322 L11.1464466,0.146446609 C11.3417088,-0.0488155365 11.6582912,-0.0488155365 11.8535534,0.146446609 C12.0488155,0.341708755 12.0488155,0.658291245 11.8535534,0.853553391 L6.70710678,6 L11.8535534,11.1464466 C12.0488155,11.3417088 12.0488155,11.6582912 11.8535534,11.8535534 C11.6582912,12.0488155 11.3417088,12.0488155 11.1464466,11.8535534 L6,6.70710678 L0.853553391,11.8535534 C0.658291245,12.0488155 0.341708755,12.0488155 0.146446609,11.8535534 C-0.0488155365,11.6582912 -0.0488155365,11.3417088 0.146446609,11.1464466 L5.29289322,6 L0.146446609,0.853553391 C-0.0488155365,0.658291245 -0.0488155365,0.341708755 0.146446609,0.146446609 C0.341708755,-0.0488155365 0.658291245,-0.0488155365 0.853553391,0.146446609 L6,5.29289322 Z" id="Icons/delete/default"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
