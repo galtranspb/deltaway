@@ -1,0 +1,251 @@
+.form__fieldset {
+  margin: 0;
+  padding: 0;
+
+  border: none;
+}
+
+.form__legend {
+  margin-bottom: 16px;
+
+  font: inherit;
+  line-height: 24px;
+}
+
+.form__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  &--type {
+    margin-bottom: 24px;
+  }
+
+  &--services {
+    margin-bottom: 32px;
+  }
+
+  &--upload {
+    margin-bottom: 64px;
+  }
+}
+
+.form__item {
+  margin-right: 16px;
+  margin-bottom: 16px;
+
+  &--upload {
+    position: relative;
+    padding-left: 20px;
+  }
+}
+
+.form__input {
+  &--radio,
+  &--checkbox,
+  &--upload {
+    display: none;
+  }
+
+  &--radio:checked+.form__label--button,
+  &--checkbox:checked+.form__label--button {
+    background-color: $button-bg-checked;
+  }
+
+  &--name,
+  &--tel {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0;
+    padding-bottom: 5px;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    font-family: "Exo 2", "Helvetica", sans-serif;
+    color: white;
+
+    background-color: black;
+
+    border: none;
+    border-bottom: 1px solid white;
+
+    outline: none;
+  }
+}
+
+.form__label {
+  outline: none;
+  cursor: pointer;
+
+  &--button {
+    display: block;
+    padding-top: 8px;
+    padding-bottom: 10px;
+
+    font-weight: 300;
+    font-family: "Exo 2", "Helvetica", sans-serif;
+    text-align: center;
+    color: white;
+
+    background-color: $button-bg;
+
+    border-radius: 4px;
+  }
+
+  &--service,
+  &--business-analytics {
+    width: 183px;
+  }
+
+  &--website,
+  &--another,
+  &--design {
+    width: 120px;
+  }
+
+  &--development {
+    width: 224px;
+  }
+
+  &--support {
+    width: 168px;
+  }
+
+  &--upload {
+    padding-left: 20px;
+
+    line-height: 24px;
+  }
+
+  &--upload:hover+.form__icon--upload {
+    fill: $button-bg-checked;
+  }
+}
+
+.form__textarea {
+  margin: 0;
+  padding: 0;
+  padding-bottom: 5px;
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  font-family: "Exo 2", "Helvetica", sans-serif;
+  color: white;
+
+  background-color: black;
+
+  border: none;
+  border-bottom: 1px solid white;
+
+  outline: none;
+}
+
+.form__wrapper {
+  position: relative;
+
+  &--textarea {
+    margin-bottom: 24px;
+  }
+
+  &--upload {
+    margin-bottom: 16px;
+  }
+
+  &--instruction {
+    margin-bottom: 24px;
+  }
+
+  &--name,
+  &--tel {
+    margin-bottom: 40px;
+  }
+}
+
+.form__content {
+  margin: 0;
+
+  font-size: 14px;
+  white-space: pre-line;
+  color: rgba(255, 255, 255, 0.4);
+
+  &--instruction {
+    padding-left: 20px;
+  }
+
+  &--instruction:first-child {
+    margin-bottom: 8px;
+  }
+}
+
+.form__icon {
+  position: absolute;
+
+  cursor: pointer;
+
+  fill: white;
+
+  &--upload {
+    left: 0;
+    top: 0;
+    width: 12px;
+    height: 24px;
+  }
+
+  &--upload:hover {
+    fill: $button-bg-checked;
+  }
+
+  &--cross {
+    left: 0;
+    top: 7px;
+    width: 12px;
+    height: 12px;
+  }
+
+  &--cross:hover {
+    fill: $error;
+  }
+}
+
+.form__uploaded-file {
+  margin: 0;
+
+  line-height: 24px;
+
+  cursor: pointer;
+
+  &:hover+.form__icon--cross {
+    fill: $error;
+  }
+}
+
+
+.form__submit {
+  box-sizing: border-box;
+  width: 100%;
+  margin-bottom: 24px;
+  padding-top: 14px;
+  padding-bottom: 18px;
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  font-family: "Exo 2", "Helvetica", sans-serif;
+  color: white;
+
+  background-color: $button-bg-checked;
+
+  border: none;
+  border-radius: 4px;
+
+  outline: none;
+  cursor: pointer;
+}

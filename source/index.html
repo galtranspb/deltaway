@@ -2,109 +2,122 @@
 <html lang="ru">
 
 <head>
-	<meta charset="utf-8">
-	<title>Delta way</title>
-	<meta name="keywords" content="Разработка, интеграцияю, дизайн, аналитика, сервис, поддержка">
+  <meta charset="utf-8">
+  <title>Delta way</title>
+  <meta name="keywords" content="Разработка, интеграцияю, дизайн, аналитика, сервис, поддержка">
   <meta name="description" content="Расскажите о своем проекте, и мы предложим решение, которое подойдет для задач вашей компании">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-	<section>
-		<h2 class="visually-hidden">Форма заявки</h2>
-		<p>Расскажите о своем проекте, и мы предложим решение, которое подойдет для задач вашей компании</p>
-		<form action="#" method="POST">
-			<fieldset>
-				<legend>Тип проекта</legend>
-				<ul>
-					<li>
-						<input id="service" type="radio" name="type" checked>
-						<label for="service" tabindex="0">Система и сервис</label>
-					</li>
-					<li>
-						<input id="website" type="radio" name="type">
-						<label for="website" tabindex="0">Сайт</label>
-					</li>
-					<li>
-						<input id="another" type="radio" name="type">
-						<label for="another" tabindex="0">Другое</label>
-					</li>
-				</ul>
-			</fieldset>
-			<fieldset>
-				<legend>Услуги</legend>
-				<ul>
-					<li>
-						<input id="business-analytics" type="checkbox" checked>
-						<label for="business-analytics" tabindex="0">Бизнес-аналитика</label>
-					</li>
-					<li>
-						<input id="design" type="checkbox" checked>
-						<label for="design" tabindex="0">Дизайн</label>
-					</li>
-					<li>
-						<input id="development" type="checkbox" checked>
-						<label for="development" tabindex="0">Разработка и интеграция</label>
-					</li>
-					<li>
-						<input id="support" type="checkbox">
-						<label for="support" tabindex="0">Поддержка</label>
-					</li>
-				</ul>
-			</fieldset>
-			<fieldset>
-				<legend>Планируемый бюджет</legend>
-				<div>
-					<!-- ползунок -->
-				</div>
-				<label for="budget">
-					до<input id="budget" name="budget" type="nubmer" placeholder="1">млн
-				</label>
-			</fieldset>
-			<fieldset>
-				<legend>Сроки</legend>
-				<div>
-					<!-- ползунок -->
-				</div>
-				<label for="timing-of-order">
-					<input id="timing-of-order" name="timing-of-order" type="nubmer" placeholder="2">месяца
-				</label>
-			</fieldset>
-			<fieldset>
-				<legend class="visually-hidden">Опишите задачу</legend>
-				<div>
-					<label for="task">Опишите задачу</label>
-					<textarea name="task" id="task" cols="20" rows="1"></textarea>
-				</div>
-				<div>
-					<input id="upload" name="upload" type="file" accept="image/pdf, image/jpeg, image/png, image/tiff" multiple>
-					<label for="upload" tabindex="0">Прикрепить файл</label>
-				</div>
-				<div>
-					<p>Можно загрузить файлы и документы
-						в формате pdf, jpeg, png, tiff</p>
-					<p>Максимальный размер — 30 МБ</p>
-				</div>
-				<ul aria-label="список загруженных файлов">
-					<li>filename1.*</li>
-				</ul>
-			</fieldset>
-			<fieldset>
-				<legend>Как с вами связаться</legend>
-				<div>
-					<label class="visually-hidden" for="name">Ваше имя</label>
-					<input id="name" type="text" placeholder="Константин" required>
-				</div>
-				<div>
-					<label class="visually-hidden" for="tel">Телефон</label>
-					<input id="tel" name="tel" type="tel" placeholder="Телефон" required>
-				</div>
-			</fieldset>
-			<button type="reset">Отправить запрос</button>
-			<p>Нажимая на кнопку, вы даете согласие
-				на обработку персональных данных
-				и соглашаетесь с политикой конфиденциальности.</p>
-		</form>
-	</section>
+  <section class="feadback">
+    <h2 class="visually-hidden">Форма заявки</h2>
+    <p class="feadback__content">Расскажите о своем проекте, и мы предложим решение, которое подойдет для задач вашей
+      компании</p>
+    <form class="form" action="#" method="POST">
+      <fieldset class="form__fieldset">
+        <legend class="form__legend">Тип проекта</legend>
+        <ul class="form__list form__list--type">
+          <li class="form__item">
+            <input class="form__input form__input--radio" id="service" type="radio" name="type" checked>
+            <label class="form__label form__label--button form__label--service" for="service" tabindex="0">Система и
+              сервис</label>
+          </li>
+          <li class="form__item">
+            <input class="form__input form__input--radio" id="website" type="radio" name="type">
+            <label class="form__label form__label--button form__label--website" for="website" tabindex="0">Сайт</label>
+          </li>
+          <li class="form__item">
+            <input class="form__input form__input--radio" id="another" type="radio" name="type">
+            <label class="form__label form__label--button form__label--another" for="another" tabindex="0">Другое</label>
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset class="form__fieldset">
+        <legend class="form__legend">Услуги</legend>
+        <ul class="form__list form__list--services">
+          <li class="form__item">
+            <input class="form__input form__input--checkbox" id="business-analytics" type="checkbox" checked>
+            <label class="form__label form__label--button form__label--business-analytics" for="business-analytics"
+              tabindex="0">Бизнес-аналитика</label>
+          </li>
+          <li class="form__item">
+            <input class="form__input form__input--checkbox" id="design" type="checkbox" checked>
+            <label class="form__label form__label--button form__label--design" for="design" tabindex="0">Дизайн</label>
+          </li>
+          <li class="form__item">
+            <input class="form__input form__input--checkbox" id="development" type="checkbox" checked>
+            <label class="form__label form__label--button form__label--development" for="development" tabindex="0">Разработка
+              и интеграция</label>
+          </li>
+          <li class="form__item">
+            <input class="form__input form__input--checkbox" id="support" type="checkbox">
+            <label class="form__label form__label--button form__label--support" for="support" tabindex="0">Поддержка</label>
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset class="form__fieldset">
+        <legend class="form__legend">Планируемый бюджет</legend>
+        <div class="slider">
+          <div class="slider__bar"></div>
+          <div class="slider__toggle"></div>
+          <p class="slider__content">до<span class="slider__output">1</span>млн &#8381;</p>
+        </div>
+      </fieldset>
+      <fieldset class="form__fieldset">
+        <legend class="form__legend">Сроки</legend>
+        <div class="slider">
+          <div class="slider__bar"></div>
+          <div class="slider__toggle"></div>
+          <p class="slider__content"><span class="slider__output">2</span>месяца</p>
+        </div>
+      </fieldset>
+      <fieldset class="form__fieldset">
+        <legend class="visually-hidden">Опишите задачу</legend>
+        <div class="form__wrapper form__wrapper--textarea">
+          <label class="form__label visually-hidden" for="task">Опишите задачу</label>
+          <textarea class="form__textarea" name="task" id="task" rows="1" cols="29" placeholder="Опишите задачу"></textarea>
+        </div>
+        <div class="form__wrapper form__wrapper--upload">
+          <input class="form__input form__input--upload" id="upload" name="upload" type="file" accept="image/pdf, image/jpeg, image/png, image/tiff"
+            multiple>
+          <label class="form__label form__label--upload" for="upload" tabindex="0">Прикрепить файл</label>
+          <svg class="form__icon form__icon--upload" width="12" height="24" aria-hidden="true" role="presentation">
+            <use xlink:href="img/sprite.svg#parenthesis"></use>
+          </svg>
+        </div>
+        <div class="form__wrapper form__wrapper--instruction">
+          <p class="form__content form__content--instruction">Можно загрузить файлы и документы
+            в формате pdf, jpeg, png, tiff</p>
+          <p class="form__content form__content--instruction">Максимальный размер — 30 МБ</p>
+        </div>
+        <ul class="form__list form__list--upload" aria-label="список загруженных файлов">
+          <li class="form__item form__item--upload">
+            <p class="form__uploaded-file">filename1.*</p>
+            <svg class="form__icon form__icon--cross" width="12" height="12" aria-hidden="true" role="presentation">
+              <use xlink:href="img/sprite.svg#cross"></use>
+            </svg>
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset class="form__fieldset">
+        <legend class="form__legend">Как с вами связаться</legend>
+        <div class="form__wrapper form__wrapper--name">
+          <label class="visually-hidden" for="name">Ваше имя</label>
+          <input class="form__input form__input--name" id="name" type="text" placeholder="Константин" required>
+        </div>
+        <div class="form__wrapper form__wrapper--tel">
+          <label class="visually-hidden" for="tel">Телефон</label>
+          <input class="form__input form__input--tel" id="tel" name="tel" type="tel" placeholder="Телефон" required>
+        </div>
+      </fieldset>
+      <button class="form__submit" type="submit">Отправить запрос</button>
+      <p class="form__content">Нажимая на кнопку, вы даете согласие
+        на обработку персональных данных
+        и соглашаетесь с политикой конфиденциальности.</p>
+    </form>
+  </section>
 </body>
 
 </html>
