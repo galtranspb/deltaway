@@ -41,6 +41,8 @@
     "gulp-svgmin": "^2.1.0",
     "node-normalize-scss": "^8.0.0",
     "stylelint": "^9.7.1",
-    "stylelint-config-htmlacademy": "^0.1.1"
+    "stylelint-config-htmlacademy": "^0.1.1",
+    "merge": ">=1.2.1",
+    "deep-extend": ">=0.5.1"
   }
 }
