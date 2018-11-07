@@ -14,3 +14,20 @@
   font-size: 24px;
   line-height: 32px;
 }
+
+@media (min-width: $desktop-width) {
+  .feadback {
+    width: 1195px;
+    padding-right: 30px;
+    padding-bottom: 80px;
+    padding-left: 30px;
+  }
+
+  .feadback__content {
+    width: 980px;
+    margin-bottom: 64px;
+
+    font-size: 36px;
+    line-height: 48px;
+  }
+}

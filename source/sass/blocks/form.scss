@@ -3,6 +3,14 @@
   padding: 0;
 
   border: none;
+
+  &--type {
+    margin-bottom: 24px;
+  }
+
+  &--services {
+    margin-bottom: 32px;
+  }
 }
 
 .form__legend {
@@ -20,14 +28,6 @@
 
   list-style: none;
 
-  &--type {
-    margin-bottom: 24px;
-  }
-
-  &--services {
-    margin-bottom: 32px;
-  }
-
   &--upload {
     margin-bottom: 64px;
   }
@@ -44,6 +44,7 @@
 }
 
 .form__input {
+
   &--radio,
   &--checkbox,
   &--upload {
@@ -52,7 +53,7 @@
 
   &--radio:checked+.form__label--button,
   &--checkbox:checked+.form__label--button {
-    background-color: $button-bg-checked;
+    background-color: rgb(12, 28, 91);
   }
 
   &--name,
@@ -62,7 +63,6 @@
     padding: 0;
     padding-bottom: 5px;
 
-    font-style: normal;
     font-weight: 400;
     font-size: 20px;
     line-height: 24px;
@@ -87,12 +87,13 @@
     padding-top: 8px;
     padding-bottom: 10px;
 
+    font-style: normal;
     font-weight: 300;
     font-family: "Exo 2", "Helvetica", sans-serif;
     text-align: center;
     color: white;
 
-    background-color: $button-bg;
+    background-color: darkgray;
 
     border-radius: 4px;
   }
@@ -123,14 +124,24 @@
   }
 
   &--upload:hover+.form__icon--upload {
-    fill: $button-bg-checked;
+    fill: rgb(12, 28, 91);
+  }
+
+  &--name {
+    margin-bottom: 8px;
+
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 12px;
+    font-family: "Exo 2", "Helvetica", sans-serif;
+    color: rgba(255, 255, 255, 0.4);
   }
 }
 
 .form__textarea {
   margin: 0;
   padding: 0;
-  padding-bottom: 5px;
+  padding-bottom: 4 px;
 
   font-style: normal;
   font-weight: 400;
@@ -180,7 +191,10 @@
   }
 
   &--instruction:first-child {
+    width: 255px;
     margin-bottom: 8px;
+
+    white-space: normal;
   }
 }
 
@@ -199,7 +213,7 @@
   }
 
   &--upload:hover {
-    fill: $button-bg-checked;
+    fill: rgb(12, 28, 91);
   }
 
   &--cross {
@@ -210,7 +224,7 @@
   }
 
   &--cross:hover {
-    fill: $error;
+    fill: red;
   }
 }
 
@@ -222,10 +236,9 @@
   cursor: pointer;
 
   &:hover+.form__icon--cross {
-    fill: $error;
+    fill: red;
   }
 }
-
 
 .form__submit {
   box-sizing: border-box;
@@ -234,18 +247,156 @@
   padding-top: 14px;
   padding-bottom: 18px;
 
-  font-style: normal;
   font-weight: 400;
   font-size: 20px;
   line-height: 28px;
   font-family: "Exo 2", "Helvetica", sans-serif;
   color: white;
 
-  background-color: $button-bg-checked;
+  background-color: rgb(12, 28, 91);
 
   border: none;
   border-radius: 4px;
 
   outline: none;
   cursor: pointer;
+}
+
+@media (min-width: $desktop-width) {
+  .form {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .form__fieldset {
+    width: 100%;
+
+    &--type,
+    &--services {
+      margin-bottom: 48px;
+    }
+
+    &--budget,
+    &--timing-of-order {
+      width: 271px;
+      margin-right: 96px;
+      margin-bottom: 80px;
+    }
+
+    &--task {
+      margin-bottom: 32px;
+    }
+
+    &--how-to-contact-you {
+      margin-bottom: 64px;
+    }
+  }
+
+  .form__legend {
+    &--budget,
+    &--timing-of-order {
+      margin-bottom: 32px;
+    }
+  }
+
+  .form__list {
+    &--upload {
+      margin-bottom: 0;
+    }
+  }
+
+  .form__label {
+    &--button {
+      padding-bottom: 12px;
+
+      font-size: 20px;
+      line-height: 28px;
+    }
+
+    &--service,
+    &--business-analytics {
+      width: 235px;
+    }
+
+    &--website,
+    &--another,
+    &--design,
+    &--support {
+      width: 200px;
+    }
+
+    &--development {
+      width: 290px;
+    }
+  }
+
+  .form__textarea {
+    width: 706px;
+    margin-right: 489px;
+
+    font-size: 16px;
+  }
+
+  .form__wrapper {
+    &--task {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+    }
+
+    &--upload {
+      margin-right: 64px;
+      margin-bottom: 0;
+    }
+
+    &--instruction {
+      order: 1;
+      margin-right: 278px;
+      margin-bottom: 0;
+      margin-left: auto;
+    }
+
+    &--how-to-contact-you {
+      display: flex;
+      align-items: flex-end;
+    }
+
+    &--name,
+    &--tel {
+      width: 270px;
+      margin-right: 72px;
+      margin-bottom: 0;
+    }
+
+    &--submit {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .form__content {
+    &--instruction {
+      padding-left: 0;
+    }
+
+    &--instruction:first-child {
+      width: auto;
+      white-space: pre-line;
+    }
+
+    &--submit {
+      width: 446px;
+
+      white-space: normal;
+    }
+  }
+
+  .form__submit {
+    width: 273px;
+    margin-right: 16px;
+    margin-bottom: 0;
+
+    font-size: 24px;
+    line-height: 32px;
+  }
 }
