@@ -13,7 +13,7 @@
   background-color: white;
 }
 
-.slider__toggle {
+.slider__thumb {
   position: absolute;
   left: 0;
   top: 0;
@@ -25,6 +25,10 @@
   border-radius: 50%;
 
   cursor: pointer;
+
+  &--timing-of-order {
+    left: 17%;
+  }
 }
 
 .slider__content {

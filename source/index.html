@@ -8,6 +8,9 @@
   <meta name="description" content="Расскажите о своем проекте, и мы предложим решение, которое подойдет для задач вашей компании">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
+  <!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> -->
 </head>
 
 <body>
@@ -59,18 +62,18 @@
       </fieldset>
       <fieldset class="form__fieldset form__fieldset--budget">
         <legend class="form__legend form__legend--budget">Планируемый бюджет</legend>
-        <div class="slider">
+        <div id="budget" class="slider">
           <div class="slider__bar"></div>
-          <div class="slider__toggle"></div>
-          <p class="slider__content">до<span class="slider__output">1</span>млн &#8381;</p>
+          <div class="slider__thumb"></div>
+          <p class="slider__content"><span class="slider__output">до 1</span>млн &#8381;</p>
         </div>
       </fieldset>
       <fieldset class="form__fieldset form__fieldset--timing-of-order">
         <legend class="form__legend form__legend--timing-of-order">Сроки</legend>
-        <div class="slider">
+        <div id="timing-of-order" class="slider">
           <div class="slider__bar"></div>
-          <div class="slider__toggle"></div>
-          <p class="slider__content"><span class="slider__output">2</span>месяца</p>
+          <div class="slider__thumb slider__thumb--timing-of-order"></div>
+          <p class="slider__content"><span class="slider__output">2 месяца</span></p>
         </div>
       </fieldset>
       <fieldset class="form__fieldset form__fieldset--task">
@@ -125,6 +128,10 @@
       </div>
     </form>
   </section>
+
+  <script src="js/slider.js"></script>
+  <script src="js/budget.js"></script>
+  <script src="js/titming-of-order.js"></script>
 </body>
 
 </html>
