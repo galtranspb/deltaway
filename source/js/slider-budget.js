@@ -22,7 +22,7 @@
       range: 'min',
       min: 0,
       max: 2,
-      value: 0,
+      // value: 0,
       change: function (event, ui) {
         $('#budget-output').text(getOutput(ui.value));
       }

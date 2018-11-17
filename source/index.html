@@ -14,6 +14,22 @@
 </head>
 
 <body>
+
+  <div style="display: none">
+    <?xml version="1.0" encoding="utf-8"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <symbol viewBox="0 0 12 12" id="cross" xmlns="http://www.w3.org/2000/svg">
+        <path d="M6 5.293L11.146.146a.5.5 0 0 1 .708.708L6.707 6l5.147 5.146a.5.5 0 0 1-.708.708L6 6.707.854 11.854a.5.5 0 0 1-.708-.708L5.293 6 .146.854A.5.5 0 0 1 .854.146L6 5.293z" />
+      </symbol>
+      <symbol viewBox="0 0 30 17" id="menu" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 3V0h30v3zm0 7V7h30v3zm15 7v-3h15v3z" />
+      </symbol>
+      <symbol viewBox="0 0 12 24" id="parenthesis" xmlns="http://www.w3.org/2000/svg">
+        <path d="M10.38 5.464H12v12.497a5.974 5.974 0 0 1-.797 3.032 5.96 5.96 0 0 1-2.17 2.197c-.915.54-1.913.81-2.994.81-1.08 0-2.083-.27-3.006-.81a6.133 6.133 0 0 1-2.21-2.197A5.827 5.827 0 0 1 0 17.961V4.392C0 3.608.2 2.88.601 2.21A4.594 4.594 0 0 1 2.209.602 4.18 4.18 0 0 1 4.392 0c.784 0 1.508.196 2.17.588.662.392 1.19.928 1.582 1.608.392.68.588 1.412.588 2.196v11.425c0 .488-.122.941-.366 1.36-.244.418-.57.749-.98.993-.41.244-.859.366-1.347.366s-.945-.122-1.372-.366a2.787 2.787 0 0 1-1.02-.994 2.582 2.582 0 0 1-.379-1.359V5.464h1.647v10.353a1 1 0 0 0 .327.771c.218.2.483.3.797.3.314 0 .571-.1.771-.3.2-.2.301-.457.301-.771V4.392a2.72 2.72 0 0 0-.366-1.372A2.787 2.787 0 0 0 5.752 2a2.582 2.582 0 0 0-1.36-.38c-.488 0-.941.127-1.36.38a2.893 2.893 0 0 0-1.006 1.02 2.65 2.65 0 0 0-.379 1.372v13.569c0 .784.2 1.516.601 2.196.401.68.937 1.22 1.608 1.62a4.18 4.18 0 0 0 2.183.602c.785 0 1.508-.2 2.17-.601a4.48 4.48 0 0 0 1.582-1.621c.392-.68.588-1.412.588-2.196V5.464z"
+          fill-rule="evenodd" />
+      </symbol>
+    </svg>
+  </div>
+
   <section class="feadback">
     <h2 class="visually-hidden">Форма заявки</h2>
     <p class="feadback__content">Расскажите о своем проекте, и мы предложим решение, которое подойдет для задач вашей
@@ -88,7 +104,9 @@
           <div class="form__wrapper form__wrapper--upload">
             <input class="form__input form__input--upload" id="upload" name="upload" type="file" accept="image/pdf, image/jpeg, image/png, image/tiff"
               multiple>
-            <label class="form__label form__label--upload" for="upload" tabindex="0">Прикрепить файл</label>
+            <label class="form__label form__label--upload" for="upload" tabindex="0">
+              Прикрепить файл
+            </label>
             <svg class="form__icon form__icon--upload" width="12" height="24" aria-hidden="true" role="presentation">
               <use xlink:href="img/sprite.svg#parenthesis"></use>
             </svg>
@@ -99,14 +117,7 @@
               jpeg, png, tiff</p>
             <p class="form__content form__content--instruction">Максимальный размер — 30 МБ</p>
           </div>
-          <ul class="form__list form__list--upload" aria-label="список загруженных файлов">
-            <li class="form__item form__item--upload">
-              <p class="form__uploaded-file">filename1.*</p>
-              <svg class="form__icon form__icon--cross" width="12" height="12" aria-hidden="true" role="presentation">
-                <use xlink:href="img/sprite.svg#cross"></use>
-              </svg>
-            </li>
-          </ul>
+          <ul class="form__list form__list--upload" id="preview" aria-label="список загруженных файлов"></ul>
         </div>
       </fieldset>
       <fieldset class="form__fieldset form__fieldset--how-to-contact-you">
@@ -131,8 +142,18 @@
     </form>
   </section>
 
+  <template id="li-task-template">
+    <li class="form__item form__item--upload">
+      <p class="form__uploaded-file" tabindex="0"></p>
+      <svg class="form__icon form__icon--cross" width="12" height="12" aria-hidden="true" role="presentation">
+        <use xlink:href="#cross"></use>
+      </svg>
+    </li>
+  </template>
+
   <script src="js/slider-budget.js"></script>
-  <script src="js/slider-titming-of-order.js"></script>
+  <script src="js/slider-term.js"></script>
+  <script src="js/uploadTaskFiles.js"></script>
 </body>
 
 </html>
