@@ -15,7 +15,7 @@
 <body>
 
   <div style="display: none">
-    <?xml version="1.0" encoding="utf-8"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
       <symbol viewBox="0 0 12 12" id="cross" xmlns="http://www.w3.org/2000/svg">
         <path d="M6 5.293L11.146.146a.5.5 0 0 1 .708.708L6.707 6l5.147 5.146a.5.5 0 0 1-.708.708L6 6.707.854 11.854a.5.5 0 0 1-.708-.708L5.293 6 .146.854A.5.5 0 0 1 .854.146L6 5.293z" />
       </symbol>
@@ -33,21 +33,21 @@
     <h2 class="visually-hidden">Форма заявки</h2>
     <p class="feadback__content">Расскажите о своем проекте, и мы предложим решение, которое подойдет для задач вашей
       компании</p>
-    <form class="form" action="#" method="POST">
+    <form class="form" id="form" action="#" method="POST" enctype="multipart/form-data">
       <fieldset class="form__fieldset form__fieldset--type">
         <legend class="form__legend">Тип проекта</legend>
         <ul class="form__list">
           <li class="form__item">
-            <input class="form__input form__input--radio" id="service" type="radio" name="type" checked>
+            <input class="form__input form__input--radio" id="service" type="radio" name="type" value="service" checked>
             <label class="form__label form__label--button form__label--service" for="service" tabindex="0">Система и
               сервис</label>
           </li>
           <li class="form__item">
-            <input class="form__input form__input--radio" id="website" type="radio" name="type">
+            <input class="form__input form__input--radio" id="website" type="radio" name="type" value="website">
             <label class="form__label form__label--button form__label--website" for="website" tabindex="0">Сайт</label>
           </li>
           <li class="form__item">
-            <input class="form__input form__input--radio" id="another" type="radio" name="type">
+            <input class="form__input form__input--radio" id="another" type="radio" name="type" value="another">
             <label class="form__label form__label--button form__label--another" for="another" tabindex="0">Другое</label>
           </li>
         </ul>
@@ -56,21 +56,21 @@
         <legend class="form__legend">Услуги</legend>
         <ul class="form__list">
           <li class="form__item">
-            <input class="form__input form__input--checkbox" id="business-analytics" type="checkbox" checked>
+            <input class="form__input form__input--checkbox" id="business-analytics" name="business-analytics" type="checkbox" checked>
             <label class="form__label form__label--button form__label--business-analytics" for="business-analytics"
               tabindex="0">Бизнес-аналитика</label>
           </li>
           <li class="form__item">
-            <input class="form__input form__input--checkbox" id="design" type="checkbox" checked>
+            <input class="form__input form__input--checkbox" id="design" name="design" type="checkbox" checked>
             <label class="form__label form__label--button form__label--design" for="design" tabindex="0">Дизайн</label>
           </li>
           <li class="form__item">
-            <input class="form__input form__input--checkbox" id="development" type="checkbox" checked>
+            <input class="form__input form__input--checkbox" id="development" name="development" type="checkbox" checked>
             <label class="form__label form__label--button form__label--development" for="development" tabindex="0">Разработка
               и интеграция</label>
           </li>
           <li class="form__item">
-            <input class="form__input form__input--checkbox" id="support" type="checkbox">
+            <input class="form__input form__input--checkbox" id="support" name="support" type="checkbox">
             <label class="form__label form__label--button form__label--support" for="support" tabindex="0">Поддержка</label>
           </li>
         </ul>
@@ -80,7 +80,7 @@
         <div class="slider">
           <div class="slider__range" id="slider-range-budget"></div>
           <p class="slider__content">
-            <input class="slider__input" id="budget" type="text">
+            <input class="slider__input" id="budget" name="budget" type="text" value="0">
             <label class="slider__output" id="budget-output" for="budget">до 1</label> млн &#8381;</p>
         </div>
       </fieldset>
@@ -89,7 +89,7 @@
         <div class="slider">
           <div class="slider__range" id="slider-range-term"></div>
           <p class="slider__content">
-            <input class="slider__input" id="term" type="text">
+            <input class="slider__input" id="term" name="term" type="text" value="2">
             <label class="slider__output" id="term-output">2 месяца</label></p>
         </div>
       </fieldset>
@@ -123,12 +123,13 @@
         <legend class="form__legend">Как с вами связаться</legend>
         <div class="form__wrapper form__wrapper--how-to-contact-you">
           <div class="form__wrapper form__wrapper--name">
-            <label class="form__label form__label--name" for="name">Имя</label>
-            <input class="form__input form__input--name" id="name" type="text" placeholder="Константин" required>
+            <label class="form__label form__label--name" for="username">Имя</label>
+            <input class="form__input form__input--name" id="username" type="text" placeholder="Константин" pattern="[A-zА-яЁё]{3,}"
+              required>
           </div>
           <div class="form__wrapper form__wrapper--tel">
             <label class="visually-hidden" for="tel">Телефон</label>
-            <input class="form__input form__input--tel" id="tel" name="tel" type="tel" placeholder="9-123-456-78-90" required>
+            <input class="form__input form__input--tel" id="tel" name="tel" type="tel" placeholder="9-123-456-78-90" pattern="8-[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}" required>
           </div>
         </div>
       </fieldset>
@@ -152,7 +153,9 @@
 
   <script src="js/slider-budget.js"></script>
   <script src="js/slider-term.js"></script>
+  <script src="js/checkUploadedFiles.js"></script>
   <script src="js/showUploadedFiles.js"></script>
+  <script src="js/sendForm.js"></script>
   <script src="js/form.js"></script>
 
 </body>

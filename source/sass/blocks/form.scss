@@ -75,6 +75,10 @@
     border-bottom: 1px solid white;
 
     outline: none;
+
+    &:focus {
+      box-shadow: 0 0 10px 0 white;
+    }
   }
 }
 
@@ -96,6 +100,10 @@
     background-color: darkgray;
 
     border-radius: 4px;
+  }
+
+  &--button:focus {
+    box-shadow: 0 0 10px 0 white;
   }
 
   &--service,
@@ -127,6 +135,10 @@
     fill: rgb(12, 28, 91);
   }
 
+  &--upload:focus {
+    box-shadow: 0 0 10px 0 white;
+  }
+
   &--name {
     margin-bottom: 8px;
 
@@ -156,6 +168,10 @@
   border-bottom: 1px solid white;
 
   outline: none;
+
+  &:focus {
+    box-shadow: 0 0 10px 0 white;
+  }
 }
 
 .form__wrapper {
@@ -260,6 +276,10 @@
 
   outline: none;
   cursor: pointer;
+
+  &:focus {
+    box-shadow: 0 0 10px 0 white;
+  }
 }
 
 @media (min-width: $desktop-width) {

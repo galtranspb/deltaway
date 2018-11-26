@@ -28,6 +28,10 @@
   cursor: pointer;
 }
 
+.ui-slider-handle:focus {
+  box-shadow: 0 0 10px 0 white;
+}
+
 .slider__content {
   margin: 0;
   margin-left: auto;

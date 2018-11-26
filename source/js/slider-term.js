@@ -27,10 +27,9 @@
       value: 2,
       change: function (event, ui) {
         $('#term-output').text(ui.value + getMonthDeclination(ui.value));
+        $('#term').attr('value', ui.value);
       }
     });
-
-    // $('#amount2').text($('#slider-range2').slider('value'));
   });
 
 })();
