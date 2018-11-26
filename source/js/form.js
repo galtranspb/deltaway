@@ -9,8 +9,10 @@
     checkedFiles = [];
 
   var onInputLoadChange = function () {
-    checkedFiles = window.checkUploadedFiles(input.files, checkedFiles);
-    window.showUploadedFiles(checkedFiles);
+    checkedFiles = window.checkUploadedFiles(input.files);
+    if (checkedFiles) {
+      window.showUploadedFiles(checkedFiles);
+    }
   };
 
   var onFormSubmit = function (evt) {

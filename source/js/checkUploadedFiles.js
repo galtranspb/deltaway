@@ -23,8 +23,9 @@
     }
   };
 
-  window.checkUploadedFiles = function (list, arr) {
-    var size = [];
+  window.checkUploadedFiles = function (list) {
+    var arr = [],
+      size = [];
     Array.from(list).forEach(function (el) {
       if (compareType(el, fileTypes)) {
         arr.push(el);
@@ -41,6 +42,7 @@
     if (amount <= MAX_FILES_SIZE) {
       return arr;
     } else {
+      console.log(errorMessage.FALSE_SIZE);
       return arr = [];
     }
   };
