@@ -1,1 +1,1 @@
-# deltaway
+https://anatolysokolov.github.io/deltaway/
