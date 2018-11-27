@@ -7,8 +7,8 @@
     "editorconfig": "editorconfig-cli",
     "stylelint": "stylelint \"source/sass/**/*.scss\" --syntax scss",
     "test": "npm run editorconfig && npm run stylelint",
-    "build": "gulp style",
-    "start": "gulp serve"
+    "build": "gulp build",
+    "start": "npm run build && gulp serve"
   },
   "editorconfig-cli": [
     "*.json",
@@ -31,18 +31,26 @@
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "^1.0.0",
     "browser-sync": "^2.26.3",
+    "deep-extend": ">=0.5.1",
+    "del": "^3.0.0",
     "gulp": "^3.9.1",
     "gulp-cheerio": "^0.6.3",
+    "gulp-csso": "^3.0.1",
+    "gulp-htmlmin": "^5.0.1",
     "gulp-plumber": "^1.2.0",
     "gulp-postcss": "^8.0.0",
+    "gulp-posthtml": "^3.0.4",
+    "gulp-rename": "^1.4.0",
     "gulp-replace": "^1.0.0",
     "gulp-sass": "^4.0.2",
     "gulp-svg-sprite": "^1.5.0",
     "gulp-svgmin": "^2.1.0",
-    "node-normalize-scss": "^8.0.0",
-    "stylelint": "^9.7.1",
-    "stylelint-config-htmlacademy": "^0.1.1",
+    "gulp-uglify": "^3.0.1",
     "merge": ">=1.2.1",
-    "deep-extend": ">=0.5.1"
+    "node-normalize-scss": "^8.0.0",
+    "posthtml-include": "^1.2.0",
+    "run-sequence": "^2.2.1",
+    "stylelint": "^9.7.1",
+    "stylelint-config-htmlacademy": "^0.1.1"
   }
 }
