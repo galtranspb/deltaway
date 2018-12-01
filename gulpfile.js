@@ -34,19 +34,6 @@ gulp.task('style', function () {
     .pipe(gulp.dest('build/css'));
 });
 
-gulp.task('serve', ['style'], function () {
-  server.init({
-    server: 'source/',
-    notify: false,
-    open: true,
-    cors: true,
-    ui: false
-  });
-
-  gulp.watch('source/sass/**/*.{scss,sass}', ['style']);
-  gulp.watch('source/*.html').on('change', server.reload);
-});
-
 gulp.task('sprite', function () {
   return gulp.src('source/img/*.svg')
     .pipe(svgmin({
@@ -116,4 +103,17 @@ gulp.task('compress', function () {
 
 gulp.task('build', function (done) {
   run('clean', 'style', 'copy', 'html', 'compress', done);
+});
+
+gulp.task('serve', ['style'], function () {
+  server.init({
+    server: 'build/',
+    notify: false,
+    open: true,
+    cors: true,
+    ui: false
+  });
+
+  gulp.watch('source/sass/**/*.{scss,sass}', ['style']);
+  gulp.watch('source/*.html').on('change', server.reload);
 });

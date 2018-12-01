@@ -2,7 +2,7 @@
   "name": "deltaway",
   "version": "1.0.0",
   "description": "",
-  "main": " ",
+  "main": "",
   "scripts": {
     "editorconfig": "editorconfig-cli",
     "stylelint": "stylelint \"source/sass/**/*.scss\" --syntax scss",
