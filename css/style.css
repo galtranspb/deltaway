@@ -427,12 +427,14 @@ body {
     position: relative;
     padding-left: 20px; }
 
-.form__input--radio, .form__input--checkbox, .form__input--upload {
-  display: none; }
-
 .form__input--radio:checked + .form__label--button,
 .form__input--checkbox:checked + .form__label--button {
   background-color: #0c1c5b; }
+
+.form__input--radio:focus + .form__label--button,
+.form__input--checkbox:focus + .form__label--button,
+.form__input--upload:focus + .form__label--upload {
+  box-shadow: 0 0 10px 0 white; }
 
 .form__input--name, .form__input--tel {
   box-sizing: border-box;
@@ -451,6 +453,9 @@ body {
   .form__input--name:focus, .form__input--tel:focus {
     box-shadow: 0 0 10px 0 white; }
 
+.form__input--upload:hover ~ .form__icon--upload {
+  fill: #0c1c5b; }
+
 .form__label {
   outline: none;
   cursor: pointer; }
@@ -465,8 +470,6 @@ body {
     color: white;
     background-color: darkgray;
     border-radius: 4px; }
-  .form__label--button:focus {
-    box-shadow: 0 0 10px 0 white; }
   .form__label--service, .form__label--business-analytics {
     width: 183px; }
   .form__label--website, .form__label--another, .form__label--design {
@@ -478,10 +481,6 @@ body {
   .form__label--upload {
     padding-left: 20px;
     line-height: 24px; }
-  .form__label--upload:hover + .form__icon--upload {
-    fill: #0c1c5b; }
-  .form__label--upload:focus {
-    box-shadow: 0 0 10px 0 white; }
   .form__label--name {
     margin-bottom: 8px;
     font-weight: 400;
@@ -619,7 +618,8 @@ body {
     margin-bottom: 0; }
   .form__wrapper--instruction {
     order: 1;
-    margin-right: 278px;
+    width: 214px;
+    margin-right: 265px;
     margin-bottom: 0;
     margin-left: auto; }
   .form__wrapper--how-to-contact-you {
