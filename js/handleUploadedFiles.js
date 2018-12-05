@@ -5,7 +5,7 @@
   var ENTER_KEYCODE = 13;
 
   var preview = document.querySelector('#preview'),
-  template = document.querySelector('#li-task-template').content.querySelector('.form__item--upload');
+    template = document.querySelector('#li-task-template').content.querySelector('.form__item--upload');
 
   var cleanPreview = function () {
     while (preview.firstChild) {
@@ -70,20 +70,5 @@
       onListEnterPress(evt, arr);
     });
   };
-
-  // window.handleUploadedFiles = {
-  //   cleanPreview: cleanPreview,
-  //   handleUploadedFiles: handleUploadedFiles 
-  // };
-
-        // form.js
-  // var onInputLoadChange = function () {
-  //   checkedFiles = window.checkUploadedFiles(input.files);
-  //   if (checkedFiles) {
-  //21   window.handleUploadedFiles.handleUploadedFiles(checkedFiles);      
-  //   }
-  // }; 
-   //    error form.js 21 - handleUploadedFiles is not a function
-
 
 })();
