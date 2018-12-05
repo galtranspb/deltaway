@@ -3,9 +3,7 @@
 (function () {
 
   var form = document.querySelector('#form'),
-    input = form.querySelector('#upload'),
-    budget = form.querySelector('#budget'),
-    term = form.querySelector('#term');
+    input = form.querySelector('#upload');
 
   var url = '#',
     checkedFiles = [];
@@ -21,8 +19,9 @@
 
     form.reset();
     cleanPreview();
-    budget.setAttribute('value', 0);
-    term.setAttribute('value', 2);
+    checkedFiles = [];
+    $('#slider-range-budget').slider('value', 0);
+    $('#slider-range-term').slider('value', 2);
   };
 
   var onInputLoadChange = function () {
