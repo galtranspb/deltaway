@@ -1,1 +1,1 @@
-https://anatolysokolov.github.io/deltaway/
+https://galtranspb.github.io/deltaway/
